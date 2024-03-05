@@ -1,0 +1,15 @@
+
+<div class="container" class="position-relative">
+<div class="position-absolute top-50 start-50 translate-middle">
+<h1>Edit task</h1>
+<%= form_with model: @task do |f| %>
+  <%= f.label :title %>
+  <%= f.text_field :title %>
+  <%= f.label :details %>
+  <%= f.text_field :details %>
+  <%= f.submit %>
+<% end %>
+
+<%= link_to "Back to list", controller: "tasks", action: "index" %>
+</div>
+</div>

@@ -1,0 +1,15 @@
+<div class="container" class="position-relative">
+<div class="position-absolute top-50 start-50 translate-middle">
+<h1><%= @task.title %></h1>
+<p><%= @task.details %></p>
+
+<%= link_to "Edit this task", controller: "tasks", action: "edit" %>
+
+<%= link_to "Back to list", controller: "tasks", action: "index" %>
+
+<%= link_to "Delete",
+  task_path(@task),
+  data: {turbo_method: :delete, turbo_confirm: "Are you sure to delete this task ?"}
+%>
+</div>
+</div>
